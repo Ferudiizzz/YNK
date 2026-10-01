@@ -25,13 +25,13 @@ export const members: Member[] = [
     bio: "暴走族の限界はない"
   },
 
-  // THE BIG 5
+  // THE CORE
   {
     id: "3",
     username: "YNK Drico",
     displayName: "YNK Drico",
     avatar: "",
-    rank: "THE BIG 5",
+    rank: "THE CORE",
     section: "the-big-5",
     status: "online",
     joinedAt: "2024",
@@ -42,7 +42,7 @@ export const members: Member[] = [
     username: "YNK wyn",
     displayName: "YNK wyn",
     avatar: "",
-    rank: "THE BIG 5",
+    rank: "THE CORE",
     section: "the-big-5",
     status: "online",
     joinedAt: "2024",
@@ -53,7 +53,7 @@ export const members: Member[] = [
     username: "Amrei Notpa",
     displayName: "Amrei Notpa",
     avatar: "",
-    rank: "THE BIG 5",
+    rank: "THE CORE",
     section: "the-big-5",
     status: "online",
     joinedAt: "2024",
@@ -64,7 +64,7 @@ export const members: Member[] = [
     username: "YNK Zephy",
     displayName: "YNK Zephy",
     avatar: "",
-    rank: "THE BIG 5",
+    rank: "THE CORE",
     section: "the-big-5",
     status: "online",
     joinedAt: "2024",
@@ -75,33 +75,33 @@ export const members: Member[] = [
     username: "YNK Christo",
     displayName: "YNK Christo",
     avatar: "",
-    rank: "THE BIG 5",
+    rank: "THE CORE",
     section: "the-big-5",
     status: "online",
     joinedAt: "2024",
     bio: "暴走族の限界はない"
   },
 
-  // $$$
+  // BLACKLIST
   {
     id: "8",
     username: "YNK grizz",
     displayName: "YNK grizz",
     avatar: "",
-    rank: "$$$",
+    rank: "BLACKLIST",
     section: "money",
     status: "online",
     joinedAt: "2024",
     bio: "暴走族の限界はない"
   },
 
-  // THUGs
+  // CREW
   {
     id: "9",
     username: "YNK Kaizo",
     displayName: "YNK Kaizo",
     avatar: "",
-    rank: "THUG",
+    rank: "CREW",
     section: "thugs",
     status: "online",
     joinedAt: "2024",
@@ -112,7 +112,7 @@ export const members: Member[] = [
     username: "YNK sonny",
     displayName: "YNK sonny",
     avatar: "",
-    rank: "THUG",
+    rank: "CREW",
     section: "thugs",
     status: "online",
     joinedAt: "2024",
@@ -123,7 +123,7 @@ export const members: Member[] = [
     username: "YNK daiki",
     displayName: "YNK daiki",
     avatar: "",
-    rank: "THUG",
+    rank: "CREW",
     section: "thugs",
     status: "online",
     joinedAt: "2024",
@@ -134,7 +134,7 @@ export const members: Member[] = [
     username: "YNK Christo",
     displayName: "YNK Christo",
     avatar: "",
-    rank: "THUG",
+    rank: "CREW",
     section: "thugs",
     status: "online",
     joinedAt: "2024",
@@ -145,7 +145,7 @@ export const members: Member[] = [
     username: "YNK Jihyo",
     displayName: "YNK Jihyo",
     avatar: "",
-    rank: "THUG",
+    rank: "CREW",
     section: "thugs",
     status: "online",
     joinedAt: "2024",
@@ -156,7 +156,7 @@ export const members: Member[] = [
     username: "YNK Cob",
     displayName: "YNK Cob",
     avatar: "",
-    rank: "THUG",
+    rank: "CREW",
     section: "thugs",
     status: "online",
     joinedAt: "2024",
@@ -167,7 +167,7 @@ export const members: Member[] = [
     username: "YNK Naz",
     displayName: "YNK Naz",
     avatar: "",
-    rank: "THUG",
+    rank: "CREW",
     section: "thugs",
     status: "online",
     joinedAt: "2024",
@@ -178,7 +178,7 @@ export const members: Member[] = [
     username: "YNK perudi",
     displayName: "YNK perudi",
     avatar: "",
-    rank: "THUG",
+    rank: "CREW",
     section: "thugs",
     status: "online",
     joinedAt: "2024",
@@ -189,7 +189,7 @@ export const members: Member[] = [
     username: "YNK zen",
     displayName: "YNK zen",
     avatar: "",
-    rank: "THUG",
+    rank: "CREW",
     section: "thugs",
     status: "online",
     joinedAt: "2024",
@@ -299,9 +299,9 @@ export const members: Member[] = [
 ];
 
 export const sections = [
-  { id: "above-all", title: "ABOVE ALL", description: "The originators. No excuses." },
-  { id: "the-big-5", title: "THE BIG 5", description: "The elite five." },
-  { id: "money", title: "$$$", description: "Money on the table." },
-  { id: "thugs", title: "THUGs", description: "The streets." },
-  { id: "vixens", title: "VIXENs", description: "Female members." }
+  { id: "above-all", title: "ABOVE ALL", description: "The highest. The few." },
+  { id: "the-core", title: "THE CORE", description: "The inner circle." },
+  { id: "blacklist", title: "BLACKLIST", description: "No mercy." },
+  { id: "crew", title: "CREW", description: "The streets." },
+  { id: "vixens", title: "VIXENS", description: "Female members." }
 ];

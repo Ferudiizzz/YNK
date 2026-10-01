@@ -20,9 +20,9 @@ function App() {
 
   const sectionGroups = {
     'above-all': members.filter(m => m.section === 'above-all'),
-    'the-big-5': members.filter(m => m.section === 'the-big-5'),
-    'money': members.filter(m => m.section === 'money'),
-    'thugs': members.filter(m => m.section === 'thugs'),
+    'the-core': members.filter(m => m.section === 'the-big-5'),
+    'blacklist': members.filter(m => m.section === 'money'),
+    'crew': members.filter(m => m.section === 'thugs'),
     'vixens': members.filter(m => m.section === 'vixens')
   };
 

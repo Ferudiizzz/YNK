@@ -22,11 +22,11 @@ const CrewMember: React.FC<CrewMemberProps> = ({ member, onClick, index }) => {
   // Use Discord avatar if available, otherwise use default Discord avatar
   const avatarUrl = member.avatar || `https://cdn.discordapp.com/embed/avatars/${parseInt(member.id) % 5}.png`;
 
-  // Vibrant paint color based on section
-  const paintColor = member.section === 'above-all' ? '#FF3B30' :
-                    member.section === 'the-big-5' ? '#FF9500' :
-                    member.section === 'money' ? '#FFCC00' :
-                    member.section === 'thugs' ? '#FF2D55' : '#AF52DE';
+  // Blood red color based on section
+  const paintColor = member.section === 'above-all' ? '#8B0000' :
+                    member.section === 'the-big-5' ? '#A00000' :
+                    member.section === 'money' ? '#5C0000' :
+                    member.section === 'thugs' ? '#B11217' : '#C1121F';
 
   return (
     <motion.div
@@ -38,13 +38,13 @@ const CrewMember: React.FC<CrewMemberProps> = ({ member, onClick, index }) => {
       onClick={onClick}
       className="relative flex flex-col items-center cursor-pointer group"
     >
-      {/* Avatar circle with vibrant brush ring */}
+      {/* Avatar circle with blood red brush ring */}
       <div className="relative mb-4">
-        {/* Rough brush ring - vibrant */}
+        {/* Rough brush ring - blood red */}
         <motion.div
           className="absolute inset-0 rounded-full opacity-40 group-hover:opacity-70 transition-opacity duration-300"
           style={{
-            border: '3px solid #FF3B30',
+            border: '3px solid #8B0000',
             transform: 'rotate(-5deg)',
             filter: 'blur(0.8px)'
           }}
@@ -65,7 +65,7 @@ const CrewMember: React.FC<CrewMemberProps> = ({ member, onClick, index }) => {
           src={avatarUrl}
           alt={member.username}
           className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover relative z-10"
-          style={{ border: '2px solid rgba(255, 59, 48, 0.3)' }}
+          style={{ border: '2px solid rgba(139, 0, 0, 0.3)' }}
           whileHover={{ rotate: 3 }}
           transition={{ duration: 0.2 }}
         />
@@ -86,17 +86,17 @@ const CrewMember: React.FC<CrewMemberProps> = ({ member, onClick, index }) => {
         whileHover={{ y: -3 }}
         transition={{ duration: 0.2 }}
       >
-        <p className="text-white-dirty text-base font-japanese-gothic font-bold tracking-wide mb-1" style={{ textShadow: '0 0 20px rgba(255, 59, 48, 0.2)' }}>
+        <p className="text-white-dirty text-base font-mono font-bold tracking-wide mb-1" style={{ textShadow: '0 0 20px rgba(139, 0, 0, 0.2)' }}>
           @{member.username}
         </p>
         <p className="text-sm font-japanese-gothic" style={{ color: paintColor, letterSpacing: '0.05em' }}>
-          YNK
+          HEYNA
         </p>
       </motion.div>
 
       {/* Hover decoration */}
-      <GraffitiDecoration type="star" color="paint-red" size="xs" className="absolute -top-3 -right-3 opacity-0 group-hover:opacity-50 transition-opacity" />
-      <GraffitiDecoration type="star" color="paint-orange" size="xs" className="absolute -bottom-2 -left-2 opacity-0 group-hover:opacity-40 transition-opacity" />
+      <GraffitiDecoration type="star" color="blood" size="xs" className="absolute -top-3 -right-3 opacity-0 group-hover:opacity-50 transition-opacity" />
+      <GraffitiDecoration type="star" color="blood-dark" size="xs" className="absolute -bottom-2 -left-2 opacity-0 group-hover:opacity-40 transition-opacity" />
     </motion.div>
   );
 };

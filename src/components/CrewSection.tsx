@@ -14,18 +14,18 @@ interface CrewSectionProps {
 
 const sectionKanji: Record<string, string> = {
   'above-all': '上',
-  'the-big-5': '五',
-  'money': '金',
-  'thugs': '暴',
+  'the-core': '核',
+  'blacklist': '禁',
+  'crew': '暴',
   'vixens': '女'
 };
 
 const sectionColors: Record<string, string> = {
-  'above-all': '#FF3B30',
-  'the-big-5': '#FF9500',
-  'money': '#FFCC00',
-  'thugs': '#FF2D55',
-  'vixens': '#AF52DE'
+  'above-all': '#8B0000',
+  'the-core': '#A00000',
+  'blacklist': '#5C0000',
+  'crew': '#B11217',
+  'vixens': '#C1121F'
 };
 
 const CrewSection: React.FC<CrewSectionProps> = ({
@@ -39,6 +39,12 @@ const CrewSection: React.FC<CrewSectionProps> = ({
 
   const sectionColor = sectionColors[title.toLowerCase().replace(/\s/g, '-')] || '#FF3B30';
   const kanji = sectionKanji[title.toLowerCase().replace(/\s/g, '-')] || '●';
+
+  // Use isBlacklist to apply different visual treatment
+  const blacklistStyle = isBlacklist ? {
+    borderColor: '#5C0000',
+    filter: 'blur(0.5px)'
+  } : {};
 
   return (
     <motion.section
@@ -64,7 +70,8 @@ const CrewSection: React.FC<CrewSectionProps> = ({
               borderColor: sectionColor,
               opacity: 0.5,
               transform: 'rotate(-8deg)',
-              filter: 'blur(1px)'
+              filter: 'blur(1px)',
+              ...blacklistStyle
             }}
           >
             {/* Kanji */}
@@ -154,9 +161,9 @@ const CrewSection: React.FC<CrewSectionProps> = ({
       </motion.div>
 
       {/* Enhanced graffiti decorations */}
-      <GraffitiDecoration type="circle" color="paint-red" size="lg" className="absolute -bottom-16 -left-16 opacity-8" />
-      <GraffitiDecoration type="circle" color="paint-orange" size="md" className="absolute top-20 right-20 opacity-6" />
-      <GraffitiDecoration type="star" color="paint-yellow" size="sm" className="absolute bottom-1/3 left-1/4 opacity-10" />
+      <GraffitiDecoration type="circle" color="blood" size="lg" className="absolute -bottom-16 -left-16 opacity-8" />
+      <GraffitiDecoration type="circle" color="blood-dark" size="md" className="absolute top-20 right-20 opacity-6" />
+      <GraffitiDecoration type="star" color="blood-deep" size="sm" className="absolute bottom-1/3 left-1/4 opacity-10" />
     </motion.section>
   );
 };
